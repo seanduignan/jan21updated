@@ -1,0 +1,150 @@
+<h1>MONGODB - EXERCISE</h1>
+<section class="insert">
+    <h3>Insert Animal Data</h3>
+    <form action="/insert" method="post">
+        <div class="input">
+            <label for="tag">Tag</label>
+            <input type="text" id="tag" name="tag">
+        </div>
+        <div class="input">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender">
+        </div>
+        <div class="input">
+            <label for="sire">Sire</label>
+            <input type="text" id="sire" name="sire">
+        </div>
+        <div class="input">
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="breed">
+        </div>
+        <div class="input">
+            <label for="dob">D.O.B.</label>
+            <input type="text" id="dob" name="dob">
+        </div>
+        <div class="input">
+            <label for="due">Calving Date</label>
+            <input type="text" id="due" name="due">
+        </div>
+        <button type="submit">INSERT</button>
+    </form>
+
+
+  </section>
+      <section class="insert">
+          <h3>Insert Vet Bills</h3>
+          <form action="/insertvet" method="post">
+              <div class="input">
+                  <label for="reason">Reason</label>
+                  <input type="text" id="reason" name="reason">
+              </div>
+              <div class="input">
+                  <label for="cost">Cost</label>
+                  <input type="text" id="cost" name="cost">
+              </div>
+              <div class="input">
+                  <label for="vetname">Vet Name</label>
+                  <input type="text" id="vetname" name="vetname">
+              </div>
+              <div class="input">
+                  <label for="date">Date</label>
+                  <input type="text" id="date" name="date">
+              </div>
+              <div class="input">
+                  <label for="tag1">Tag</label>
+                  <input type="text" id="tag1" name="tag1">
+              </div>
+              <button type="submit">INSERT</button>
+          </form>
+  </section>
+
+
+
+</section>
+<section class="get">
+    <h3>Get Cattle Data</h3>
+    <a href="/get-data">LOAD DATA</a>
+    <div>
+        {{# each items }}
+            <article class="item">
+                <div>Tag: {{ this.tag }}</div>
+                <div>Gender: {{ this.gender }}</div>
+                <div>Sire: {{ this.sire }}</div>
+                <div>Breed: {{ this.breed }}</div>
+                <div>D.O.B.: {{ this.dob }}</div>
+                <div>Calving Date: {{ this.due }}</div>
+                <div>ID: {{ this._id }}</div>
+
+            </article>
+        {{/each}}
+    </div>
+</section>
+
+
+</section>
+<section class="get">
+    <h3>Get Vet Data</h3>
+    <a href="/get-vetdata">LOAD DATA</a>
+    <div>
+        {{# each units }}
+            <article class="unit">
+                <div>Tag: {{ this.tag1 }}</div>
+                <div>Reason: {{ this.reason }}</div>
+                <div>Vet Name: {{ this.vetname }}</div>
+                <div>Cost: {{ this.cost }}</div>
+                <div>Date: {{ this.date }}</div>
+                <div>ID: {{ this._id }}</div>
+
+            </article>
+        {{/each}}
+    </div>
+</section>
+
+
+
+<section class="update">
+    <h3>Update Cattle</h3>
+    <form action="/update" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <div class="input">
+            <label for="tag">Tag</label>
+            <input type="text" id="tag" name="tag">
+        </div>
+        <div class="input">
+            <label for="gender">Gender</label>
+            <input type="text" id="gender" name="gender">
+        </div>
+        <div class="input">
+            <label for="sire">Sire</label>
+            <input type="text" id="sire" name="sire">
+        </div>
+        <div class="input">
+            <label for="breed">Breed</label>
+            <input type="text" id="breed" name="breed">
+        </div>
+        <div class="input">
+            <label for="dob">D.O.B.</label>
+            <input type="text" id="dob" name="dob">
+        </div>
+        <div class="input">
+            <label for="due">Calving Date</label>
+            <input type="text" id="due" name="due">
+        </div>
+        <button type="submit">UPDATE</button>
+    </form>
+
+</section>
+</section>
+<section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section>
